@@ -46,12 +46,10 @@ export default function DepositForm() {
     const data = await response.json();
     const sbtcWalletAddress = data.sbtcContractData.sbtcWalletAddress;
 
-    console.log('btc address', btcAddress)
-
     // // if we are working via devnet
     // const sbtcWalletAccount = await testnet.getBitcoinAccount(WALLET_00);
     // const sbtcWalletAddress = sbtcWalletAccount.tr.address;
-        console.log('stx address', sbtcWalletAddress)
+       
     const tx = await sbtcDepositHelper({
       // comment this line out if working via devnet
       // network: TESTNET,
